@@ -29,10 +29,10 @@ public class Node extends JComponent {
         super.paintComponent(g);
 
         // Move Node according to gravity
-        if ( canMove ) {
+        if ( canMove /*&& speed < 1000 * SimulationSettings.GRAVITY*/) {
             speed = speed + SimulationSettings.GRAVITY;
-            y = y + (int) speed;
         }
+        y = y + (int) speed;
 
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);

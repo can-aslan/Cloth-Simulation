@@ -16,7 +16,7 @@ public class SimulationPanel extends JPanel implements MouseInputListener, Actio
 
     // Constructors
     public SimulationPanel() {
-        timer = new Timer( 5, this);
+        timer = new Timer( 10, this);
         
         line = 0;
         addMouseListener(this);
@@ -28,7 +28,7 @@ public class SimulationPanel extends JPanel implements MouseInputListener, Actio
         nodes = new ArrayList<Node>();
         nodes.add( new Node( 100, 100));
 
-        repaint();
+        timer.start();
     }
     
     // Methods
@@ -39,13 +39,10 @@ public class SimulationPanel extends JPanel implements MouseInputListener, Actio
         for ( Node n : nodes ) {
             n.paintComponent(g); 
         }
-
-        timer.start();
     }
 
     @Override
     public void mouseClicked( MouseEvent e) {
-        repaint();
         System.out.println( line + ": Mouse clicked.");
         line++;
     }
@@ -89,6 +86,7 @@ public class SimulationPanel extends JPanel implements MouseInputListener, Actio
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
+        timer.restart();
     }
     
 }
