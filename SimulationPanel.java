@@ -1,50 +1,42 @@
-import java.awt.event.MouseEvent;
-
-import javax.swing.JPanel;
-import javax.swing.event.MouseInputListener;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
 public class SimulationPanel extends JPanel implements MouseInputListener {
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
+    // Properties
+    final Color LIGHT_BLUE = new Color( 178, 215, 255);
+
+    // Constructors
+    public SimulationPanel() {
+        setBackground( LIGHT_BLUE);
+        setLayout( null);
+        setBorder( BorderFactory.createEmptyBorder( 10, 10, 10, 10));
+
+        repaint();
     }
+    
+    // Methods
+    @Override
+    public void mouseClicked( MouseEvent e) {}
 
     @Override
-    public void mousePressed(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
+    public void mousePressed( MouseEvent e) {}
 
     @Override
-    public void mouseReleased(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
+    public void mouseReleased( MouseEvent e) {}
 
     @Override
-    public void mouseEntered(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
+    public void mouseEntered( MouseEvent e) {}
 
     @Override
-    public void mouseExited(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
+    public void mouseExited( MouseEvent e) {}
 
     @Override
-    public void mouseDragged(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
+    public void mouseDragged( MouseEvent e) {}
 
     @Override
-    public void mouseMoved(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
+    public void mouseMoved( MouseEvent e) {}
     
 }
