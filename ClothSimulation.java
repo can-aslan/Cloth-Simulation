@@ -1,6 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
 
+import simobjects.SimulationSettings;
+
 public class ClothSimulation
 {
     static final String PROG_NAME = "Cloth Simulation";
